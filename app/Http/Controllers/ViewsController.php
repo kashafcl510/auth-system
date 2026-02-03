@@ -28,4 +28,10 @@ class ViewsController extends Controller
     public function resetPassword(){
         return view('authVelzon.resetPassword');
     }
+
+
+
+    public function table(){
+        return view('site.velzonTable');
+    }
 }

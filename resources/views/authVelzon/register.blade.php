@@ -338,3 +338,34 @@ $(document).ready(function () {
 </body>
 
 </html>
+
+{{--
+
+
+
+$.ajax({
+    url: '/login',
+    method: 'POST',
+    data: $('#loginForm').serialize(),
+
+    beforeSend: function () {
+        clearErrors();
+        disableButton(true);
+    },
+
+    success: function (response) {
+        window.location.href = response.redirect;
+    },
+
+    error: function (xhr) {
+        if (xhr.status === 422) {
+            showValidationErrors(xhr.responseJSON.errors);
+        } else {
+            showGeneralError('Something went wrong.');
+        }
+    },
+
+    complete: function () {
+        disableButton(false);
+    }
+}); --}}
