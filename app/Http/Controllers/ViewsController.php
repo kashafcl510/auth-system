@@ -33,5 +33,9 @@ class ViewsController extends Controller
 
     public function table(){
         return view('site.velzonTable');
+
+
+    } public function listingPage(){
+        return view('site.listings');
     }
 }

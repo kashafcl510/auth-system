@@ -232,6 +232,8 @@
     <script src="assets/js/pages/password-addon.init.js"></script>
 
 
+    
+
     <script>
        $(document).ready(function() {
     $('#loginForm input').on('input', function() {

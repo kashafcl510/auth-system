@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('password');
             $table->enum('role' ,['admin' , 'user'])->default('user');
             $table->boolean('is_active')->default(true);
+            $table->boolean('welcome_shown')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

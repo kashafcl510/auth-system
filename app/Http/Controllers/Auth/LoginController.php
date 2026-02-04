@@ -67,6 +67,20 @@ class LoginController extends Controller
     if (Auth::attempt($credentials, $request->filled('remember'))) {
         $request->session()->regenerate();
 
+        $user = Auth::user();
+
+
+    if (!$user->welcome_shown) {
+        session()->flash('show_welcome', true);
+        session()->flash('welcome_name', $user->name);
+        session()->flash('welcome_role', $user->role);
+
+
+        $user->welcome_shown = true;
+        $user->save();
+    }
+
+
         if ($request->expectsJson()) {
             return response()->json([
                 'message' => 'Login successful',

@@ -25,13 +25,13 @@ Route::middleware('guest')->group(function () {
 
 Route::get('/', fn () => view('authVelzon.login'));
 });
-
 // User
 Route::middleware(['auth', 'role:user'])->group(function () {
     Route::get('/dashboard', [ViewsController::class, 'siteDashboard'])->name('site.dashboard');
     Route::get('/table', [ViewsController::class, 'table'])->name('site.velzonTable');
     Route::post('/table/create', [StudentController::class, 'store'])->name('student.create');
     Route::get('/table/index', [StudentController::class, 'index'])->name('student.index');
+    Route::get('/listings', [ViewsController::class, 'listingPage'])->name('user.listing');
 });
 
 // Admin
