@@ -38,4 +38,8 @@ class ViewsController extends Controller
     } public function listingPage(){
         return view('site.listings');
     }
+
+     public function categoryPage(){
+        return view('admin.categories');
+    }
 }

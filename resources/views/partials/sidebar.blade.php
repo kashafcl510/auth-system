@@ -58,6 +58,11 @@
     <span data-key="t-multi-level">Banking and Payouts</span>
 </a>
 
+<a class="nav-link menu-link" href="{{ route('admin.categories') }}">
+    <i class=" ri-building-2-fill"></i>
+    <span data-key="t-multi-level">Categories</span>
+</a>
+
 
 
                     </ul>

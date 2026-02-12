@@ -14,8 +14,7 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
 
-         <link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
-
+    <link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
@@ -50,29 +49,29 @@
     <!-- Begin page -->
     @include('partials.header')
 
-     @include('partials.sidebar')
+    @include('partials.sidebar')
 
 
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
 
 
-        <div class="main-content">
+    <div class="main-content">
 
-            <div class="page-content">
-                <div class="container-fluid">
-                          @yield('main-content')
+        <div class="page-content">
+            <div class="container-fluid">
+                @yield('main-content')
 
 
-                </div>
-                <!-- container-fluid -->
             </div>
-            <!-- End Page-content -->
-
-             @include('partials.footer')
+            <!-- container-fluid -->
         </div>
-        <!-- end main content-->
+        <!-- End Page-content -->
+
+        @include('partials.footer')
+    </div>
+    <!-- end main content-->
 
     </div>
 
@@ -110,23 +109,23 @@
 
 
 
-<!-- SweetAlert -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- Confetti -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-@include('partials.welcome-alert')
+    @include('partials.welcome-alert')
 
-<!-- JAVASCRIPT -->
-<script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
-<script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
-<script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
-<script src="{{ asset('assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
-<script src="{{ asset('assets/js/plugins.js') }}"></script>
+    <!-- JAVASCRIPT -->
 
-  <!-- password-addon init -->
+    <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins.js') }}"></script>
+
+    <!-- password-addon init -->
     <script src="{{ asset('assets/js/pages/password-addon.init.js') }}"></script>
 
 
@@ -135,21 +134,21 @@
     <!-- password create init -->
     <script src="{{ asset('assets/js/pages/passowrd-create.init.js') }}"></script>
 
-<!-- apexcharts -->
-<script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+    <!-- apexcharts -->
+    <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-<!-- Vector map -->
-<script src="{{ asset('assets/libs/jsvectormap/js/jsvectormap.min.js') }}"></script>
-<script src="{{ asset('assets/libs/jsvectormap/maps/world-merc.js') }}"></script>
+    <!-- Vector map -->
+    <script src="{{ asset('assets/libs/jsvectormap/js/jsvectormap.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/jsvectormap/maps/world-merc.js') }}"></script>
 
-<!-- Swiper slider js -->
-<script src="{{ asset('assets/libs/swiper/swiper-bundle.min.js') }}"></script>
+    <!-- Swiper slider js -->
+    <script src="{{ asset('assets/libs/swiper/swiper-bundle.min.js') }}"></script>
 
-<!-- Dashboard init -->
-<script src="{{ asset('assets/js/pages/dashboard-ecommerce.init.js') }}"></script>
+    <!-- Dashboard init -->
+    <script src="{{ asset('assets/js/pages/dashboard-ecommerce.init.js') }}"></script>
 
 
- <!-- prismjs plugin -->
+    <!-- prismjs plugin -->
     <script src="{{ asset('assets/libs/prismjs/prism.js') }}"></script>
 
     {{-- <script src="{{ asset('assets/libs/list.js/list.min.js') }}"></script>
@@ -160,12 +159,23 @@
 
 
 
+    <!-- jQuery (must come first) -->
+    <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- DataTables (Velzon bundle) -->
+    <script src="{{ asset('assets/libs/datatables/datatables.min.js') }}"></script>
 
 
-<!-- App js -->
-<script src="{{ asset('assets/js/app.js') }}"></script>
 
-@stack('scripts')
+    <!-- App js -->
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+
+    @stack('scripts')
+
+<x-sweetalert />
 
 
 
